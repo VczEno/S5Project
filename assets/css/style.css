@@ -19,16 +19,29 @@ header {
     position: sticky;
     top:0;
     z-index: 1;
-    animation: navColor 2s ease-in-out 5s 1 normal both;
-    
+/*     animation: navColor 1s ease-in-out 0s reverse 1 forwards
+ */}
+/* .unscrolled {
+    animation: navColor 0.5s ease-in-out 0s reverse 1 both;
+} */
+
+.scrolled {
+    background-color: white;
+    animation: navColor 0.5s ease-in-out 0s normal 1 both;
 }
 
-
+@keyframes navColor {
+    from { 
+        background-color: #ffc017;
+    }
+    to {
+        background-color: white;
+    }
+}
 
 header nav ul {
     display: flex;
     list-style-type: none;
-
 }
 
 header nav ul li a {
@@ -42,6 +55,19 @@ header nav ul li:last-child a {
     background-color: #191919;
     padding: 0.5em 1em;
     border-radius: 50px;
+}
+
+#navbtn {
+    animation: btnColor 0.5s ease-in-out 0s normal 1 both;
+}
+
+@keyframes btnColor {
+    from { 
+        background-color: #191919;
+    }
+    to {
+        background-color: #1a8917;
+    }
 }
 
 /* animazione navbar  */
@@ -62,23 +88,22 @@ header nav ul li:last-child a {
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 3em 0 2em;
+    padding: 3rem 0 2rem;
     padding-left: 10%;
-    width: 70%;
-
-   
+    width: 50%;
 }
 
 .hero div:first-child h1 {
     font-family: 'Spectral', serif; 
     font-weight: 500;
-    font-size: 6em;
-
+    font-size: 7em;
 }
 
 .hero div:first-child p {
     font-size: 1.6em;
     padding-right: 45%;
+    
+
 }
 
 .hero div:first-child a {
@@ -87,9 +112,10 @@ header nav ul li:last-child a {
     width: fit-content;
     background-color: #191919;
     text-decoration: none;
-    padding: 0.5em 3em;
+    padding: 0.6em 2.6em;
     border-radius: 50px;
     font-size: 1.2em;
+    margin: 2em 0;
 }
 
 /* SECTION TRENDINGS */
@@ -100,14 +126,13 @@ header nav ul li:last-child a {
     border-bottom: 1px solid #ddd;
     padding: 3rem 10% 0;
     justify-content: space-between;
-
 }
 
 .trending > div:first-child {
-display: flex;
-width: 100%;
-align-items: center;
-
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .trending div:first-child h4 {
@@ -115,7 +140,6 @@ align-items: center;
     font-weight: 900;
     margin-left: 1rem;
     font-size: 0.8rem;
-
 }
 
  /* ARCICLE */
@@ -158,10 +182,18 @@ article .author img {
     margin:0.5rem 0 1rem
 }
 
-.trending article div:last-child p {
+.trending article div:last-child span {
+    display:flex;
     color: #888;
     font-size: 0.8rem;
+    
 }
+
+.trending article img:last-child {
+    margin-left: 0.8ch;
+    position:relative;
+    top:-25%
+} 
 
 /* LATEST */
 
@@ -177,15 +209,14 @@ main > div {
 .latest {
     flex-direction: column;
     width: 60%;
-    
 }
 
 main > div .latest article {
-    
     height: 10rem;
     flex-direction: row;
     align-items: center;
     margin: 2rem 0;
+    height: fit-content;
 }
 
 .latest article h2 {
@@ -194,7 +225,11 @@ main > div .latest article {
     margin: 0.5rem 0 0.5rem;
 }
 
-.latest article div p {
+.latest article > div {
+    width: 60%;
+}
+
+.latest article > div > p {
     color: #888;
     font-size: 1rem;
     margin: 0.5rem 0 1rem;
@@ -211,17 +246,30 @@ main > div .latest article {
     font-size: 0.8rem;
 }
 
-.latest article div div span {
+.latest article div div div span {
     background: #eee;
+    color:#888;
+    font-size: 0.8rem;
+    margin:0 0.8ch;
     
     padding:0.5em 0.7em 0.3em;
     border-radius: 50px;
+}
+
+.latest article div div div {
+    display:flex;
+    align-items: baseline;
+}
+
+.latest article div div div img {
+    align-self: center;
 }
 
 .latest article > img {
     margin-left: 2rem;
     height: 10rem;
 }
+
 
 /* ASIDE */
 /* TAGS */
@@ -238,7 +286,6 @@ aside h4 {
     font-weight: 900;
     font-size: 0.8rem;
     margin-left: 0.3rem
-
 }
 
 aside .tags {
@@ -252,7 +299,6 @@ aside .tags a {
     color:#666;
     border: 1px solid #ddd;
     padding: 0.5rem;
-    
     margin: 0.3rem;
 }
 
