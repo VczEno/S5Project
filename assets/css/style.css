@@ -1,0 +1,296 @@
+html {
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+body {
+    font-family:'Roboto', sans-serif;
+    color: #191919
+}
+
+/* HEADER */
+header {
+    background-color: #ffc017;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 10%;
+    border-bottom: 2px solid #191919;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    animation: navColor 2s ease-in-out 5s 1 normal both;
+    
+}
+
+
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #191919 ;
+    margin: 0 1em;
+}
+
+header nav ul li:last-child a {
+    color: white;
+    background-color: #191919;
+    padding: 0.5em 1em;
+    border-radius: 50px;
+}
+
+/* animazione navbar  */
+
+
+
+/* MAIN */
+/* SECTION HERO */
+
+.hero {
+    display:flex;
+    justify-content: space-between;
+    background-color: #ffc017;
+    border-bottom:2px solid #191919; 
+}
+
+.hero div:first-child {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3em 0 2em;
+    padding-left: 10%;
+    width: 70%;
+
+   
+}
+
+.hero div:first-child h1 {
+    font-family: 'Spectral', serif; 
+    font-weight: 500;
+    font-size: 6em;
+
+}
+
+.hero div:first-child p {
+    font-size: 1.6em;
+    padding-right: 45%;
+}
+
+.hero div:first-child a {
+    text-align: center;
+    color: white;
+    width: fit-content;
+    background-color: #191919;
+    text-decoration: none;
+    padding: 0.5em 3em;
+    border-radius: 50px;
+    font-size: 1.2em;
+}
+
+/* SECTION TRENDINGS */
+
+.trending {
+    display:flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ddd;
+    padding: 3rem 10% 0;
+    justify-content: space-between;
+
+}
+
+.trending > div:first-child {
+display: flex;
+width: 100%;
+align-items: center;
+
+}
+
+.trending div:first-child h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-left: 1rem;
+    font-size: 0.8rem;
+
+}
+
+ /* ARCICLE */
+
+.trending article {
+    display:flex;
+    width: 30%;
+    height:max-content;
+    margin-bottom: 2rem;
+}
+
+.trending article div:first-child p {
+    color:#ddd;
+    font-weight:700;
+    font-size: 2em;
+    margin-right: 1.5rem;
+}
+
+article .author {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+article .author img {
+    height: 1.5rem;
+    border-radius: 50px;
+    margin-right:0.5rem
+}
+
+.trending article div:last-child {
+    display:flex;
+    flex-direction: column;
+}
+
+.trending article div:last-child h2 {
+    font-weight: 900;
+    font-size: 1rem;
+    margin:0.5rem 0 1rem
+}
+
+.trending article div:last-child p {
+    color: #888;
+    font-size: 0.8rem;
+}
+
+/* LATEST */
+
+main > div, main > div .latest, main > div .latest article, main > div, main > div aside .tags, main > div aside nav ul {
+    display: flex;
+}
+
+main > div {
+    padding: 4rem 10%;
+    justify-content: space-between;
+}
+
+.latest {
+    flex-direction: column;
+    width: 60%;
+    
+}
+
+main > div .latest article {
+    
+    height: 10rem;
+    flex-direction: row;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.latest article h2 {
+    font-weight: 900;
+    font-size: 1.4rem;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.latest article div p {
+    color: #888;
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+.latest article div div:last-child {
+    display:flex;
+    justify-content: space-between;
+    align-content:baseline;
+}
+
+.latest article div div p {
+    color:#888;
+    font-size: 0.8rem;
+}
+
+.latest article div div span {
+    background: #eee;
+    
+    padding:0.5em 0.7em 0.3em;
+    border-radius: 50px;
+}
+
+.latest article > img {
+    margin-left: 2rem;
+    height: 10rem;
+}
+
+/* ASIDE */
+/* TAGS */
+
+aside {
+    width: 30%;
+    margin-top: 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+aside h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 0.8rem;
+    margin-left: 0.3rem
+
+}
+
+aside .tags {
+    flex-wrap: wrap;
+    padding: 1rem 0rem 1.5rem;
+    border-bottom: 1px solid #ddd
+}
+
+aside .tags a {
+    text-decoration: none;
+    color:#666;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    
+    margin: 0.3rem;
+}
+
+/* ASIDE NAV */
+
+aside nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    padding: 1rem 0 
+}
+
+aside nav a {
+    text-decoration: none;
+    color: #888;
+}
+
+aside nav ul li {
+    margin: 0 1.5rem 1rem 0rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
